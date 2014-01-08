@@ -18,7 +18,7 @@ import ch.uzh.ifi.seal.soprafs14.controller.beans.user.UserResponseBean;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class UserServiceControllerIT {
 
-	final String TEST_SERVER = "http://localhost:8085";
+	final String TEST_SERVER = "http://localhost:26011";
 	
 	@Test
 	@SuppressWarnings("unchecked")
