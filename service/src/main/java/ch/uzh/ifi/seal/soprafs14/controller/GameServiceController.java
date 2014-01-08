@@ -156,16 +156,16 @@ public class GameServiceController extends GenericService {
 		logger.debug("listMoves");
 		List<GameMoveResponseBean> result = new ArrayList<>();
 		
-		Game game = gameRepo.findOne(gameId);
+//		Game game = gameRepo.findOne(gameId);
 		
-		GameMoveResponseBean tmpGameMoveResponseBean;
-		for(Move move : game.getMoves()) {
-			tmpGameMoveResponseBean = new GameMoveResponseBean();
-			
+//		GameMoveResponseBean tmpGameMoveResponseBean;
+//		for(Move move : game.getMoves()) {
+//			tmpGameMoveResponseBean = new GameMoveResponseBean();
+//			
 //			TODO: Mapping into GameMoveResponseBean
-			
-			result.add(tmpGameMoveResponseBean);
-		}
+//			
+//			result.add(tmpGameMoveResponseBean);
+//		}
 		
 		return result;
 	}
@@ -184,11 +184,11 @@ public class GameServiceController extends GenericService {
 	public GameMoveResponseBean getMove(@PathVariable Long gameId, @PathVariable Integer moveId) {
 		logger.debug("getMove: " + gameId);
 		
-		Move move = gameRepo.findOne(gameId).getMoves().get(moveId);
+//		Move move = gameRepo.findOne(gameId).getMoves().get(moveId);
 		
 		GameMoveResponseBean gameMoveResponseBean = new GameMoveResponseBean();
 		
-		//TODO Mapping into GameMoveResponseBean
+//		TODO Mapping into GameMoveResponseBean
 		
 		return gameMoveResponseBean;
 	}
