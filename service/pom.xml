@@ -176,12 +176,13 @@
 		</plugin>	    
 	    
 		<plugin>
-       	  <groupId>org.eclipse.jetty</groupId>
-          <artifactId>jetty-maven-plugin</artifactId>
-          <version>9.0.7.v20131107</version>
-          <configuration>
-            <jettyXml>src/test/resources/jetty.xml</jettyXml>
-          </configuration>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-maven-plugin</artifactId>
+		  <configuration>
+		    <scanIntervalSeconds>10</scanIntervalSeconds>
+		    <stopKey>STOP</stopKey>
+		    <stopPort>26011</stopPort>
+		  </configuration>
 		  <executions>
 		    <execution>
 		      <id>start-jetty</id>
@@ -190,17 +191,17 @@
 		        <goal>start</goal>
 		      </goals>
 		      <configuration>
-		       <scanIntervalSeconds>0</scanIntervalSeconds>
-		       <daemon>true</daemon>
+		        <scanIntervalSeconds>0</scanIntervalSeconds>
+		        <daemon>true</daemon>
 		      </configuration>
 		    </execution>
 		    <execution>
 		      <id>stop-jetty</id>
 		      <phase>post-integration-test</phase>
-		      <goals>
-		        <goal>stop</goal>
-		      </goals>
-		    </execution>
+		       <goals>
+		         <goal>stop</goal>
+		       </goals>
+		     </execution>
 		  </executions>
 		</plugin>
 	  </plugins>
