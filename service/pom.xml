@@ -181,7 +181,8 @@
 		  <configuration>
 		    <scanIntervalSeconds>10</scanIntervalSeconds>
 		    <stopKey>STOP</stopKey>
-		    <stopPort>26011</stopPort>
+		    <stopPort>26012</stopPort>
+		    <startPort>26011</startPort>
 		  </configuration>
 		  <executions>
 		    <execution>
