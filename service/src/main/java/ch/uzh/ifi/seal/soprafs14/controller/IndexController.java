@@ -10,6 +10,6 @@ public class IndexController {
 	@RequestMapping(value="/")
 	@ResponseBody
 	public String index() {
-		return "SoPra FS15!";
+		return "SoPra FS15 now with Heroku integration!";
 	}
 }
